@@ -1,213 +1,216 @@
 // Product data organized by category
 const categorizedProducts = {
     'sofas': [
-        { id: 1, name: "Elegant Sofa", price: 97500, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756725667/3PCS-Living-Room-Furniture-Sets-Sectional-Sofa-for-Living-Room-Sofas_lwlaql.avif", description: "A classic and comfortable sofa, perfect for any living room.", room: "living-room" },
-        { id: 6, name: "Lounge Sofa", price: 156000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756729404/lounge_sofa_nyh9ar.avif", description: "This spacious lounge sofa offers ultimate comfort and style.", room: "living-room" },
-        { id: 13, name: "Outdoor Sofa Set", price: 130000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756800451/outdoor_sofa3_bopwgw.webp", description: "A durable and stylish outdoor sofa set, perfect for patios and gardens.", room: "outdoor" },
-        { id: 14, name: "Modern Sectional Sofa", price: 175000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756800762/modernsectional_sofa1_x1gvej.jpg", description: "A sleek and modern sectional sofa that fits perfectly in contemporary living rooms.", room: "living-room" },
+        { id: 1, name: "Simple Wooden Sofa", price: 97500, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757498042/simple_wooden_sofa_fsczbh.jpg", description: "A classic and comfortable wooden sofa, perfect for any living room.", room: "living-room" },
+    
+        
     ],
     'chairs': [
         { id: 2, name: "outdoor Wooden Chair", price: 19500, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756725668/brown-wooden-furniture_ib9con.jpg", description: "Handcrafted from durable wood, this chair is ideal for outdoor use.", room: "outdoor" },
-        { id: 4, name: "Single Sofa Chair", price: 32500, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756730344/single_sofa_chair_jdzno4.jpg", description: "A stylish and comfortable single-seater sofa chair, perfect for a cozy corner.", room: "living-room" },
-        { id: 15, name: "Velvet Accent Chair", price: 25000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756800938/velvetaccentchair_p5s16u.webp", description: "A luxurious velvet accent chair to add a touch of elegance to any room.", room: "living-room" },
+        { id: 4, name: "Dining Chairs", price: 19500, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757142474/dininng_chair_v7aeuh.jpg", description: "A stylish dining chair with a comfortable cushioned seat.", room: "dining-room" },
+        { id: 16, name: "Patio Dining Chair", price: 15000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757488367/Patio-Dining-Chair-Set-of-2-with-Metal-and-Acacia-Wood-Frame_vorkkk.webp", description: "Weather-resistant chair, ideal for outdoor dining and relaxing on the patio.", room: "outdoor" },
+        {id: 11, name: "Classy Dining Chairs", price: 25000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757142474/chair5_w72ods.jpg", description: "A set of elegant dining chairs with a modern design.", room: "dining-room" },
     ],
     'tables': [
-        { id: 3, name: "Lift top Coffee Table", price: 26000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756730515/lift_top_coffee_table_pi9aba.jpg", description: "This versatile coffee table features a lift-top design for a functional workspace.", room: "living-room" },
+        { id: 3, name: "6 seater dining table", price: 26000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757142474/dining_set_wzflp9.jpg", description: "This is a specially crafted ^ seate Dining table Perfect for your home.", room: "dining-room" },
         { id: 5, name: "Dining Table Set", price: 117000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756730877/dining_table_set_zrsuxb.jpg", description: "A complete dining set with a sturdy table and matching chairs.", room: "dining-room" },
-        { id: 7, name: "Bedside Table", price: 10400, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756731002/bedside_tqble_sgx1he.jpg", description: "A small and elegant table, perfect for your bedroom essentials.", room: "bedroom" },
-        { id: 12, name: "Study Desk", price: 36400, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756731162/study_table_rgu7sc.jpg", description: "A simple and modern study desk, ideal for a productive workspace.", room: "bedroom" },
-        {id: 16, name: "Mahogany Dining Table", price: 150000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756808744/mahogany_dining_table_c6uyxi.jpg", description: "A luxurious mahogany dining table that adds elegance to any dining room.", room: "dining-room" },
-        {id: 17, name: "Mahogany Dining Table Set", price: 250000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756808738/mahogany_dining_table_2_pww6zz.webp", description: "A complete mahogany dining table set with matching chairs for a sophisticated dining experience.", room: "dining-room" },
-        {id: 18, name: "Outdoor Dining Table Set", price: 180000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756808737/mahogany_dining_table_1_eszzzh.jpg", description: "A durable and stylish outdoor dining table set, perfect for alfresco dining.", room: "outdoor" },
+        { id: 7, name: "Bedside Table", price: 10400, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757488186/bedside_table_2_tsunji.webp", description: "A sleek and functional bedside table with storage.", room: "bedroom" },
+        { id: 17, name: "Coffee Table", price: 22000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757446482/square_coffee_table_ka9vrw.jpg", description: "Stylish and modern coffee table, the centerpiece of your living room.", room: "living-room" },
+        {id: 20, name: "Specious Mahogany Dining Table", price: 250000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756808744/mahogany_dining_table_c6uyxi.jpg", description: "A large mahogany dining table that can comfortably seat 8-10 people.", room: "dining-room" },
+        {id: 21, name: "Strong 6 seater Mahogany Dining Table", price: 180000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756808738/mahogany_dining_table_2_pww6zz.webp", description: "A sturdy mahogany dining table that can comfortably seat 6 people.", room: "dining-room" },
+        {id: 22, name: "Mahogany Coffee Table", price: 45000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757445077/Classic-mahogany-coffee-table_wpnwvs.webp", description: "A beautifully crafted mahogany coffee table to enhance your living room decor.", room: "living-room" },
+        {id: 25, name: "Patio Dining Table", price: 35000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757444859/patiofurniture_m37mdq.webp", description: "A durable patio dining table, perfect for outdoor meals and gatherings.", room: "outdoor" },
     ],
     'beds': [
-        { id: 8, name: "King-Size Bed", price: 195000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756731294/kingbed_oqpqmy.jpg", description: "Luxurious king-size bed for a restful night's sleep.", room: "bedroom" },
-        {id: 19, name: "King-Size Bed with Storage", price: 220000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756809463/kingbed1_iapcv6.webp", description: "A king-size bed with built-in storage drawers to maximize space in your bedroom.", room: "bedroom" },
-        {id: 20, name: "Queen-Size Bed", price: 180000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756809456/kingbed_vzcpeb.jpg", description: "A comfortable queen-size bed that fits perfectly in most bedrooms.", room: "bedroom" },
-        {id: 21, name: "Modern Bed", price: 200000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756809453/modernbed_z0mgqh.webp", description: "A sleek and modern bed design that adds a contemporary touch to your bedroom.", room: "bedroom" },
+        { id: 8, name: "Double Decker Bed", price: 78000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757013088/double_decker_beds_jr2nub.jpg", description: "A comfortable and spacious double decker bed for a good night's sleep.", room: "bedroom" },
+        { id: 9, name: "Single Bed", price: 52000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757142474/bed2_mjhp8c.jpg", description: "A compact single bed, ideal for smaller rooms or guest spaces.", room: "bedroom" },
+        { id: 18, name: "King Size Bed", price: 120000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757142474/bed3_nvftpx.jpg", description: "Luxurious king-size bed for maximum comfort and style.", room: "bedroom" },
+        {id: 23, name: "wood and Metal Double Decker Bed", price: 95000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757013087/double_decker_beds1_hi3n16.jpg", description: "A sturdy double decker bed made from a combination of wood and metal.", room: "bedroom" },
+        { id: 24, name: "Kristoff Solid Mahogany Wood Platform Bed", price: 150000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757497387/mahogany_bed._mlbiyc.jpg", description: "A solid mahogany wood platform bed that combines elegance and durability.", room: "bedroom" },
+        {id: 26, name: "Timber Double Decker Bed", price: 85000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757013087/mahogany_double_decker_beds_sfqsvs.jpg", description: "A robust timber double decker bed, perfect for maximizing space in any bedroom.", room: "bedroom" },
+        {id: 27, name: "Vermont Oak bed", price: 130000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757675628/Vermont_Oak_Bed_zkt76p.jpg", description: "A stylish oak bed that adds a touch of sophistication to your bedroom.", room: "bedroom" },
+        {id: 28, name: "Wooden Single Bed", price: 60000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757675593/Wooden_bed_frame_zmx6lq.webp", description: "A classic wooden single bed, perfect for any bedroom setting.", room: "bedroom" },
     ],
-    'storage': [
-        { id: 9, name: "Wardrobe", price: 58500, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756731646/portable_wadrobe_ik5ujf.jpg", description: "A spacious and portable wardrobe for all your storage needs.", room: "bedroom" },
-        { id: 11, name: "Bookshelf", price: 23400, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756731646/bookshelf_eve0co.webp", description: "A stylish bookshelf to organize your favorite books and decor.", room: "living-room" },
-        {id: 22, name: "Modern Wardrobe", price: 75000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756843503/wadrobe1_ptnguf.jpg", description: "A sleek and modern wardrobe design that fits perfectly in contemporary bedrooms.", room: "bedroom" },
-        {id: 23, name: "5 Door Wardrobe", price: 120000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756843667/wadrobe2_jqy9xv.jpg", description: "A spacious 5-door wardrobe with ample storage for your clothing and accessories.", room: "bedroom" },
-    ],
-    'media': [
-        { id: 10, name: "TV Stand", price: 39000, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1756731651/tv_stand_ukegot.jpg", description: "A sleek TV stand with ample storage for your media devices.", room: "living-room" },
-    ],
+    'shelves': [
+        { id: 10, name: "Bookshelf", price: 28600, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757449088/storage_display_oonroj.jpg", description: "A classic bookshelf with multiple tiers for all your books and decor.", room: "living-room" },
+        
+        { id: 12, name: "Corner Shelf", price: 15600, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757449088/storage_display_oonroj.jpg", description: "Space-saving corner shelf, perfect for displaying items in any room.", room: "living-room" },
+        { id: 19, name: "Floating Shelves", price: 9500, image: "https://res.cloudinary.com/ddn5u79ju/image/upload/v1757449254/floating_shelves_csmfen.jpg", description: "Minimalist floating shelves to add a modern touch to your wall.", room: "living-room" },
+    ]
 };
 
-const products = Object.entries(categorizedProducts).flatMap(([category, items]) => {
-    return items.map(item => ({ ...item, category }));
-});
+// Combine all products into a single array
+const products = Object.values(categorizedProducts).flat();
+
+// Get DOM elements
+const productContainer = document.getElementById('product-container');
+const cartBtn = document.getElementById('cart-btn');
+const cartModal = document.getElementById('cart-modal');
+const closeCartBtn = document.getElementById('close-cart-btn');
+const cartItemsContainer = document.getElementById('cart-items');
+const cartTotalSpan = document.getElementById('cart-total');
+const cartCountSpan = document.getElementById('cart-count');
+const roomButtons = document.querySelectorAll('.filter-room-btn');
+const categoryDropdown = document.getElementById('category-dropdown');
+const searchInput = document.getElementById('search-input');
+const loadMoreBtn = document.getElementById('load-more-btn');
+const quickViewModal = document.getElementById('quick-view-modal');
+const closeQuickViewBtn = document.getElementById('close-quick-view-btn');
+const quickViewName = document.getElementById('quick-view-name');
+const quickViewImage = document.getElementById('quick-view-image');
+const quickViewPrice = document.getElementById('quick-view-price');
+const quickViewDescription = document.getElementById('quick-view-description');
+const quickViewAddToCartBtn = document.getElementById('quick-view-add-to-cart-btn');
 
 let cart = [];
+let productsPerPage = 9;
+let productsToShow = productsPerPage;
 
-// State management for filters and search
-let filterState = {
-    category: 'all',
+// Initial state for filters
+const filterState = {
     room: 'all',
+    category: 'all',
     search: ''
 };
 
-const productsPerPage = 6;
-let productsToShow = productsPerPage;
+// Function to format price
+const formatPrice = (price) => {
+    return `KSh ${price.toLocaleString('en-KE')}`;
+};
 
-// DOM element references
-const productContainer = document.getElementById('product-container');
-const cartCount = document.getElementById('cart-count');
-const cartItemsContainer = document.getElementById('cart-items');
-const cartTotal = document.getElementById('cart-total');
-const cartModal = document.getElementById('cart-modal');
-const cartBtn = document.getElementById('cart-btn');
-const closeCartBtn = document.getElementById('close-cart-btn');
-const searchInput = document.getElementById('search-input');
-const categoryDropdown = document.getElementById('category-dropdown');
-const roomButtons = document.querySelectorAll('.filter-room-btn');
-const loadMoreBtn = document.getElementById('load-more-btn');
-const quickViewModal = document.getElementById('quick-view-modal');
-const quickViewContent = document.getElementById('quick-view-content');
-const closeQuickViewBtn = document.getElementById('close-quick-view-btn');
-
-
-/**
- * Renders product cards to the page based on the given array.
- * @param {Array} productList - The array of products to display.
- * @param {boolean} append - If true, appends new products instead of replacing them.
- */
-function renderProducts(productList, append = false) {
+// Function to render products
+const renderProducts = (filteredProducts, append = false) => {
     if (!append) {
         productContainer.innerHTML = '';
+        productsToShow = productsPerPage;
     }
 
-    if (productList.length === 0) {
-        productContainer.innerHTML = '<p class="text-center text-gray-500 col-span-full">No products found matching your criteria.</p>';
-        loadMoreBtn.classList.add('hidden');
-        return;
-    }
-
-    const start = append ? productContainer.children.length : 0;
-    const end = Math.min(productList.length, start + productsPerPage);
-    const productsToRender = productList.slice(start, end);
-
-    productsToRender.forEach(product => {
+    const productsToDisplay = filteredProducts.slice(0, productsToShow);
+    
+    productsToDisplay.forEach(product => {
         const productCard = document.createElement('div');
-        // Add new class for hover effects
-        productCard.className = 'product-card bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out transform';
+        productCard.className = "product-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl";
         productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-md mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">${product.name}</h3>
-            <p class="text-gray-600 mt-2">KSh ${product.price.toLocaleString()}</p>
-            <button data-id="${product.id}" class="quick-view-btn mt-4 bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-full hover:bg-gray-300 transition-colors duration-300 w-full transform hover:scale-105">Quick View</button>
-            <button data-id="${product.id}" class="add-to-cart-btn mt-2 bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-600 transition-colors duration-300 w-full transform hover:scale-105">Add to Cart</button>
+            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold text-gray-800">${product.name}</h3>
+                <p class="text-gray-600 mt-1">${formatPrice(product.price)}</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <button class="add-to-cart-btn bg-amber-800 text-white px-4 py-2 rounded-full font-semibold hover:bg-amber-900 transition-colors duration-300" data-id="${product.id}">
+                        Add to Cart
+                    </button>
+                    <button class="quick-view-btn text-gray-600 hover:text-amber-800 transition-colors duration-300" data-id="${product.id}">
+                        Quick View
+                    </button>
+                </div>
+            </div>
         `;
         productContainer.appendChild(productCard);
     });
 
-    if (end < productList.length) {
+    if (filteredProducts.length > productsToShow) {
         loadMoreBtn.classList.remove('hidden');
     } else {
         loadMoreBtn.classList.add('hidden');
     }
-}
+};
 
-/**
- * Updates the shopping cart count displayed on the UI.
- */
-function updateCartCount() {
-    cartCount.innerText = cart.length;
-}
+// Function to filter and search products
+const applyFiltersAndSearch = () => {
+    let filtered = products;
 
-/**
- * Renders the items inside the shopping cart modal.
- */
-function renderCart() {
+    // Filter by room
+    if (filterState.room !== 'all') {
+        filtered = filtered.filter(p => p.room === filterState.room);
+    }
+
+    // Filter by category
+    if (filterState.category !== 'all') {
+        const categoryProducts = categorizedProducts[filterState.category] || [];
+        const categoryIds = categoryProducts.map(p => p.id);
+        filtered = filtered.filter(p => categoryIds.includes(p.id));
+    }
+
+    // Filter by search term
+    if (filterState.search !== '') {
+        const searchTerm = filterState.search.toLowerCase();
+        filtered = filtered.filter(p => p.name.toLowerCase().includes(searchTerm));
+    }
+
+    renderProducts(filtered);
+};
+
+// Function to update the cart counter
+const updateCartCount = () => {
+    cartCountSpan.textContent = cart.length;
+};
+
+// Function to render cart items
+const renderCart = () => {
     cartItemsContainer.innerHTML = '';
     let total = 0;
-
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<p class="text-center text-gray-500">Your cart is empty.</p>';
-        cartTotal.innerText = `KSh 0.00`;
-        return;
+        cartItemsContainer.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
+    } else {
+        cart.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.className = "flex items-center space-x-4";
+            cartItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded object-cover">
+                <div class="flex-1">
+                    <p class="font-semibold">${item.name}</p>
+                    <p class="text-gray-600">${formatPrice(item.price)}</p>
+                </div>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+            total += item.price;
+        });
     }
+    cartTotalSpan.textContent = formatPrice(total);
+};
 
-    cart.forEach(item => {
-        const cartItem = document.createElement('div');
-        cartItem.className = 'flex justify-between items-center bg-gray-50 p-3 rounded-lg';
-        cartItem.innerHTML = `
-            <span class="font-semibold">${item.name}</span>
-            <span>KSh ${item.price.toLocaleString()}</span>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-        total += item.price;
-    });
+// Function to render quick view modal
+const renderQuickView = (product) => {
+    quickViewName.textContent = product.name;
+    quickViewImage.src = product.image;
+    quickViewImage.alt = product.name;
+    quickViewPrice.textContent = formatPrice(product.price);
+    quickViewDescription.textContent = product.description;
+    quickViewAddToCartBtn.dataset.id = product.id;
+};
 
-    cartTotal.innerText = `KSh ${total.toLocaleString()}`;
-}
 
-/**
- * Renders the content of the quick-view modal.
- * @param {object} product - The product object to display.
- */
-function renderQuickView(product) {
-    quickViewContent.innerHTML = `
-        <div class="md:w-1/2">
-            <img src="${product.image}" alt="${product.name}" class="w-full h-auto object-cover rounded-lg">
-        </div>
-        <div class="md:w-1/2">
-            <h3 class="text-3xl font-bold text-gray-800 mb-2">${product.name}</h3>
-            <p class="text-2xl text-gray-600 font-semibold mb-4">KSh ${product.price.toLocaleString()}</p>
-            <p class="text-gray-700 mb-6">${product.description || 'No description available.'}</p>
-            <button data-id="${product.id}" class="add-to-cart-btn bg-blue-500 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-600 transition-colors duration-300 transform hover:scale-105">Add to Cart</button>
-        </div>
-    `;
-}
-
-/**
- * Applies all active filters and the search query to the products array
- * and then renders the result.
- */
-function applyFiltersAndSearch() {
-    let filteredProducts = products;
-
-    if (filterState.category !== 'all') {
-        filteredProducts = filteredProducts.filter(p => p.category === filterState.category);
-    }
-    
-    if (filterState.room !== 'all') {
-        filteredProducts = filteredProducts.filter(p => p.room === filterState.room);
-    }
-
-    if (filterState.search.length > 0) {
-        const searchTerm = filterState.search.toLowerCase();
-        filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(searchTerm));
-    }
-
-    productsToShow = productsPerPage;
-    renderProducts(filteredProducts, false);
-}
-
+// Initial render
 applyFiltersAndSearch();
+renderCart();
 
-categoryDropdown.addEventListener('change', (e) => {
-    filterState.category = e.target.value;
-    applyFiltersAndSearch();
-});
-
+// Event listener for room filter buttons
 roomButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        roomButtons.forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
-        e.target.classList.add('bg-blue-500', 'text-white');
+        roomButtons.forEach(btn => {
+            btn.classList.remove('bg-amber-800', 'text-white');
+            btn.classList.add('bg-stone-200', 'text-gray-800');
+        });
+        e.target.classList.add('bg-amber-800', 'text-white');
+        e.target.classList.remove('bg-stone-200', 'text-gray-800');
         filterState.room = e.target.dataset.room;
         applyFiltersAndSearch();
     });
 });
 
+// Event listener for category dropdown
+categoryDropdown.addEventListener('change', (e) => {
+    filterState.category = e.target.value;
+    applyFiltersAndSearch();
+});
+
+// Event listener for the search input field
 searchInput.addEventListener('input', (e) => {
     filterState.search = e.target.value;
     applyFiltersAndSearch();
 });
 
+// Event listener for adding items to the cart (using event delegation)
 productContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('add-to-cart-btn')) {
         const productId = parseInt(e.target.dataset.id);
@@ -221,7 +224,8 @@ productContainer.addEventListener('click', (e) => {
         } else if (productToAdd) {
             alert(`${productToAdd.name} is already in your cart.`);
         }
-    } else if (e.target.classList.contains('quick-view-btn')) {
+    }
+    if (e.target.classList.contains('quick-view-btn')) {
         const productId = parseInt(e.target.dataset.id);
         const product = products.find(p => p.id === productId);
         if (product) {
@@ -232,6 +236,7 @@ productContainer.addEventListener('click', (e) => {
     }
 });
 
+// Event listeners for showing and hiding the cart modal
 cartBtn.addEventListener('click', () => {
     cartModal.classList.remove('hidden');
     cartModal.classList.add('flex');
@@ -242,11 +247,13 @@ closeCartBtn.addEventListener('click', () => {
     cartModal.classList.remove('flex');
 });
 
+// Event listeners for showing and hiding the quick view modal
 closeQuickViewBtn.addEventListener('click', () => {
     quickViewModal.classList.add('hidden');
     quickViewModal.classList.remove('flex');
 });
 
+// Event listener for the "Load More" button
 loadMoreBtn.addEventListener('click', () => {
     productsToShow += productsPerPage;
     const currentProducts = products.filter(p => {

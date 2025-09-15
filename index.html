@@ -29,119 +29,95 @@
         }
         
         .product-card:hover {
-            transform: scale(1.07) translateY(-5px);
+            transform: scale(1.03) rotate(1deg);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        /* New styles for social media icons */
-        .social-link {
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            transform: scale(1);
-        }
-
-        .social-link:hover {
-            transform: scale(1.2);
-        }
-
-        .social-link.facebook:hover { color: #1877F2; }
-        .social-link.instagram:hover { color: #E4405F; }
-        .social-link.tiktok:hover { color: #000000; }
-        .social-link.whatsapp:hover { color: #25D366; }
-        .social-link.x:hover { color: #000000; }
-
-        /* Carousel specific styles */
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #3b82f6 !important;
         }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-stone-100 font-sans">
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto p-4 flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-blue-600">Furni-Mart</h1>
+            <a href="#home" class="flex items-center">
+                <img src="https://res.cloudinary.com/ddn5u79ju/image/upload/v1757100391/logo_gg53hk.png" alt="Furni-Mart Logo" class="h-10 w-10 mr-2">
+                <h1 class="text-2xl font-bold text-gray-800">Tri2030Fur</h1>
+            </a>
             <ul class="flex space-x-6 text-gray-600">
-                <li><a href="#home" class="hover:text-blue-500 transition-colors duration-300">Home</a></li>
-                <li><a href="#products" class="hover:text-blue-500 transition-colors duration-300">Products</a></li>
-                <li><a href="#contact" class="hover:text-blue-500 transition-colors duration-300">Contact</a></li>
-                <li><button id="cart-btn" class="relative text-xl text-gray-600 hover:text-blue-500 focus:outline-none transition-transform duration-300 transform hover:scale-110">🛒<span id="cart-count" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">0</span></button></li>
+                <li><a href="#home" class="hover:text-amber-800 transition-colors duration-300">Home</a></li>
+                <li><a href="#products" class="hover:text-amber-800 transition-colors duration-300">Products</a></li>
+                <li><a href="#contact" class="hover:text-amber-800 transition-colors duration-300">Contact</a></li>
+                <li><button id="cart-btn" class="relative text-xl text-gray-600 hover:text-amber-800 focus:outline-none">🛒<span id="cart-count" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">0</span></button></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container mx-auto p-6">
-        <div id="home" class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide flex items-center justify-center text-center text-white" style="background-image: url('https://res.cloudinary.com/ddn5u79ju/image/upload/v1756747304/b2_s9hctb.jpg');">
-                    <div class="bg-black bg-opacity-60 p-8 rounded-lg shadow-2xl backdrop-blur-sm">
-                        <h2 class="text-6xl font-extrabold text-white">Discover Your Style</h2>
-                        <p class="mt-4 text-xl text-white">Handcrafted furniture for a beautiful home.</p>
-                        <a href="#products" class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 mt-6 transform hover:scale-105">Shop Now</a>
+    <main class="container mx-auto p-4">
+        <section id="home" class="py-12 min-h-screen flex items-center justify-center text-center">
+            <div class="relative w-full overflow-hidden rounded-lg shadow-xl">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg-cover bg-center rounded-lg" style="background-image: url('https://res.cloudinary.com/ddn5u79ju/image/upload/v1757142474/mahogany_table_jddufo.jpg');">
+                            <div class="bg-black bg-opacity-50 h-full flex items-center justify-center p-8 rounded-lg">
+                                <div class="text-center text-white">
+                                    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Discover Your Dream <span class="text-amber-400">Furniture</span></h2>
+                                    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">From elegant sofas to sturdy dining sets, find pieces that define your space and style.</p>
+                                    <a href="#products" class="bg-amber-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-900 transition-colors duration-300">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-cover bg-center rounded-lg" style="background-image: url('https://res.cloudinary.com/ddn5u79ju/image/upload/v1756729404/lounge_sofa_nyh9ar.avif');">
+                            <div class="bg-black bg-opacity-50 h-full flex items-center justify-center p-8 rounded-lg">
+                                <div class="text-center text-white">
+                                    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Quality and Comfort for Your <span class="text-amber-400">Home</span></h2>
+                                    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">Crafted with the finest materials to bring comfort and long-lasting beauty to every room.</p>
+                                    <a href="#products" class="bg-amber-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-900 transition-colors duration-300">Explore Collection</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-cover bg-center rounded-lg" style="background-image: url('https://res.cloudinary.com/ddn5u79ju/image/upload/v1757142474/dining_set_wzflp9.jpg');">
+                            <div class="bg-black bg-opacity-50 h-full flex items-center justify-center p-8 rounded-lg">
+                                <div class="text-center text-white">
+                                    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Perfect Pieces for <span class="text-amber-400">Every Room</span></h2>
+                                    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">Redefine your living space with our exclusive range of modern and classic furniture.</p>
+                                    <a href="#products" class="bg-amber-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-900 transition-colors duration-300">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide flex items-center justify-center text-center text-white" style="background-image: url('https://res.cloudinary.com/ddn5u79ju/image/upload/v1756725882/tribeca-warm-grey-sofa-range-mto-sofa-fina-furniture-large-left-hand-facing-585120_whxhb0.webp');">
-                    <div class="bg-black bg-opacity-50 p-8 rounded-lg shadow-2xl backdrop-blur-sm">
-                        <h2 class="text-6xl font-extrabold text-white">Fresh Designs</h2>
-                        <p class="mt-4 text-xl text-white">Explore our latest arrivals and seasonal collections.</p>
-                        <a href="#products" class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 mt-6 transform hover:scale-105">View Collection</a>
-                    </div>
-                </div>
-                <div class="swiper-slide flex items-center justify-center text-center text-white" style="background-image: url('https://res.cloudinary.com/ddn5u79ju/image/upload/v1756749674/chair_pu5e7m.jpg');">
-                    <div class="bg-black bg-opacity-50 p-8 rounded-lg shadow-2xl backdrop-blur-sm">
-                        <h2 class="text-6xl font-extrabold text-white">Limited Time Offer</h2>
-                        <p class="mt-4 text-xl text-white">Get 20% off all sofas this week only!</p>
-                        <a href="#products" class="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 mt-6 transform hover:scale-105">Shop Sofas</a>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next text-white hover:text-blue-500"></div>
-            <div class="swiper-button-prev text-white hover:text-blue-500"></div>
-        </div>
+        </section>
 
-        <section id="products" class="py-12 bg-white rounded-lg shadow-md mt-8 p-6">
-            <h2 class="text-4xl font-bold text-gray-800 text-center mb-8">Our Products</h2>
-
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
-                <div class="flex space-x-2 flex-wrap justify-center gap-2">
-                    <button class="filter-room-btn bg-gray-300 text-gray-800 py-2 px-4 rounded-full transition-colors duration-300" data-room="all">All Rooms</button>
-                    <button class="filter-room-btn bg-gray-300 text-gray-800 py-2 px-4 rounded-full transition-colors duration-300" data-room="outdoor">Outdoor</button>
-                    <button class="filter-room-btn bg-gray-300 text-gray-800 py-2 px-4 rounded-full transition-colors duration-300" data-room="living-room">Living Room</button>
-                    <button class="filter-room-btn bg-gray-300 text-gray-800 py-2 px-4 rounded-full transition-colors duration-300" data-room="dining-room">Dining Room</button>
-                    <button class="filter-room-btn bg-gray-300 text-gray-800 py-2 px-4 rounded-full transition-colors duration-300" data-room="bedroom">Bedroom</button>
+        <section id="products" class="py-12 mt-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Our Products</h2>
+            
+            <div class="mb-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+                <div class="flex-grow flex flex-wrap justify-center md:justify-start gap-4">
+                    <button class="filter-room-btn active bg-amber-800 text-white py-2 px-6 rounded-full focus:outline-none transition-all duration-300" data-room="all">All</button>
+                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="living-room">Living Room</button>
+                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="dining-room">Dining Room</button>
+                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="bedroom">Bedroom</button>
+                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="office">Office</button>
+                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="outdoor">Outdoor</button>
                 </div>
-
-                <div class="relative w-full max-w-xs">
-                    <select id="category-dropdown" class="block w-full p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 appearance-none bg-white">
+                <div class="flex items-center space-x-4 w-full md:w-auto mt-4 md:mt-0">
+                    <select id="category-dropdown" class="p-2 border border-gray-300 rounded-md bg-white text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800">
                         <option value="all">All Categories</option>
+                        <option value="sofas">Sofas</option>
                         <option value="chairs">Chairs</option>
                         <option value="tables">Tables</option>
-                        <option value="sofas">Sofas</option>
                         <option value="beds">Beds</option>
-                        <option value="storage">Storage</option>
-                        <option value="media">Media</option>
+                        <option value="shelves">Shelves</option>
                     </select>
+                    <input type="text" id="search-input" placeholder="Search products..." class="p-2 border border-gray-300 rounded-md w-full md:w-64 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300">
                 </div>
-            </div>
-
-            <div class="flex justify-center mb-8">
-                <input type="text" id="search-input" placeholder="Search for furniture..." class="w-full max-w-lg p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300">
             </div>
 
             <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
-
-            <div id="load-more-container" class="flex justify-center mt-8">
-                <button id="load-more-btn" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">Load More</button>
+            
+            <div class="flex justify-center mt-8">
+                <button id="load-more-btn" class="bg-amber-800 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-900 transition-colors duration-300 hidden">Load More</button>
             </div>
         </section>
 
@@ -158,41 +134,50 @@
                 </div>
             </div>
         </div>
-        
-        <div id="quick-view-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-50">
-            <div class="bg-white rounded-lg p-8 w-full max-w-2xl shadow-xl animate-scale-in relative">
-                <button id="close-quick-view-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl transition-transform duration-300 transform hover:rotate-90">&times;</button>
-                <div id="quick-view-content" class="flex flex-col md:flex-row gap-6 items-center">
+
+        <div id="quick-view-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-[9999]">
+            <div class="bg-white rounded-lg p-6 w-full max-w-2xl shadow-xl animate-scale-in">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="quick-view-name" class="text-2xl font-bold"></h3>
+                    <button id="close-quick-view-btn" class="text-gray-500 hover:text-gray-800 text-3xl transition-transform duration-300 transform hover:rotate-90">&times;</button>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-6 items-center">
+                    <img id="quick-view-image" src="" alt="" class="w-full md:w-1/2 rounded-lg object-cover mb-4 md:mb-0">
+                    <div class="flex-1">
+                        <p id="quick-view-price" class="text-xl font-semibold text-gray-700 mb-2"></p>
+                        <p id="quick-view-description" class="text-gray-600 text-sm mb-4"></p>
+                        <button id="quick-view-add-to-cart-btn" class="bg-amber-800 text-white py-2 px-4 rounded-full font-semibold hover:bg-amber-900 transition-colors duration-300 add-to-cart-btn" data-id="">Add to Cart</button>
                     </div>
+                </div>
             </div>
         </div>
 
-        <section id="contact" class="py-12 min-h-screen flex flex-col items-center justify-center text-center bg-blue-100 rounded-lg shadow-md mt-8 p-6">
-            <h2 class="text-4xl font-bold text-blue-800">Contact Us</h2>
-            <p class="mt-4 text-lg text-gray-700">Find us at: 123 Furni-Mart Avenue, Nairobi, Kenya</p>
-            <div class="mt-8 flex space-x-6 text-3xl text-gray-600">
-                <a href="https://www.facebook.com/" class="social-link facebook hover:scale-125" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/" class="social-link instagram hover:scale-125" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/" class="social-link tiktok hover:scale-125" target="_blank" aria-label="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://wa.me/" class="social-link whatsapp hover:scale-125" target="_blank" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://twitter.com/" class="social-link x hover:scale-125" target="_blank" aria-label="X (formerly Twitter)">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
+        <section id="contact" class="py-12 min-h-screen flex items-center justify-center text-center bg-stone-200 rounded-lg shadow-md mt-8 p-6 ">
+            <div class="max-w-4xl">
+                <h2 class="text-4xl font-bold text-gray-800">Contact Us</h2>
+                <p class="mt-4 text-lg text-gray-700">we are located Along Ngong Rd near Race course gardens, Nairobi, Kenya.
+                    You can reach us through the following social media channels:
+                </p>
+                <div class="mt-8 flex space-x-6 text-3xl text-gray-600">
+                    <a href="https://www.facebook.com/" class="social-link facebook hover:scale-125 transition-transform duration-300" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-link instagram hover:scale-125 transition-transform duration-300" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/" class="social-link tiktok hover:scale-125 transition-transform duration-300" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/" class="social-link whatsapp hover:scale-125 transition-transform duration-300" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social-link x hover:scale-125 transition-transform duration-300" target="_blank" aria-label="X (formerly Twitter)">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
-
-    <footer class="bg-gray-800 text-white p-4 text-center mt-8">
-        <p>&copy; 2024 Furni-Mart. All Rights Reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
