@@ -44,12 +44,6 @@ const products = Object.values(categorizedProducts).flat();
 
 // Get DOM elements
 const productContainer = document.getElementById('product-container');
-const cartBtn = document.getElementById('cart-btn');
-const cartModal = document.getElementById('cart-modal');
-const closeCartBtn = document.getElementById('close-cart-btn');
-const cartItemsContainer = document.getElementById('cart-items');
-const cartTotalSpan = document.getElementById('cart-total');
-const cartCountSpan = document.getElementById('cart-count');
 const roomButtons = document.querySelectorAll('.filter-room-btn');
 const categoryDropdown = document.getElementById('category-dropdown');
 const searchInput = document.getElementById('search-input');
@@ -60,9 +54,9 @@ const quickViewName = document.getElementById('quick-view-name');
 const quickViewImage = document.getElementById('quick-view-image');
 const quickViewPrice = document.getElementById('quick-view-price');
 const quickViewDescription = document.getElementById('quick-view-description');
-const quickViewAddToCartBtn = document.getElementById('quick-view-add-to-cart-btn');
+// NEW: Get the "Contact Us to Order" button
+const contactToOrderBtn = document.getElementById('contact-to-order-btn'); 
 
-let cart = [];
 let productsPerPage = 9;
 let productsToShow = productsPerPage;
 
@@ -91,16 +85,13 @@ const renderProducts = (filteredProducts, append = false) => {
         const productCard = document.createElement('div');
         productCard.className = "product-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl";
         productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+            <img src="${product.image}" alt="${product.name}" class="w-full object-cover aspect-square">
             <div class="p-4">
                 <h3 class="text-xl font-semibold text-gray-800">${product.name}</h3>
                 <p class="text-gray-600 mt-1">${formatPrice(product.price)}</p>
-                <div class="mt-4 flex justify-between items-center">
-                    <button class="add-to-cart-btn bg-amber-800 text-white px-4 py-2 rounded-full font-semibold hover:bg-amber-900 transition-colors duration-300" data-id="${product.id}">
-                        Add to Cart
-                    </button>
-                    <button class="quick-view-btn text-gray-600 hover:text-amber-800 transition-colors duration-300" data-id="${product.id}">
-                        Quick View
+                <div class="mt-4 flex justify-end items-center">
+                    <button class="quick-view-btn bg-amber-800 text-white px-4 py-2 rounded-full font-semibold hover:bg-amber-900 hover:border-2 hover:border-amber-800 transition-colors duration-300" data-id="${product.id}">
+                        View Details
                     </button>
                 </div>
             </div>
@@ -140,35 +131,6 @@ const applyFiltersAndSearch = () => {
     renderProducts(filtered);
 };
 
-// Function to update the cart counter
-const updateCartCount = () => {
-    cartCountSpan.textContent = cart.length;
-};
-
-// Function to render cart items
-const renderCart = () => {
-    cartItemsContainer.innerHTML = '';
-    let total = 0;
-    if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
-    } else {
-        cart.forEach(item => {
-            const cartItem = document.createElement('div');
-            cartItem.className = "flex items-center space-x-4";
-            cartItem.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded object-cover">
-                <div class="flex-1">
-                    <p class="font-semibold">${item.name}</p>
-                    <p class="text-gray-600">${formatPrice(item.price)}</p>
-                </div>
-            `;
-            cartItemsContainer.appendChild(cartItem);
-            total += item.price;
-        });
-    }
-    cartTotalSpan.textContent = formatPrice(total);
-};
-
 // Function to render quick view modal
 const renderQuickView = (product) => {
     quickViewName.textContent = product.name;
@@ -176,13 +138,11 @@ const renderQuickView = (product) => {
     quickViewImage.alt = product.name;
     quickViewPrice.textContent = formatPrice(product.price);
     quickViewDescription.textContent = product.description;
-    quickViewAddToCartBtn.dataset.id = product.id;
 };
 
 
 // Initial render
 applyFiltersAndSearch();
-renderCart();
 
 // Event listener for room filter buttons
 roomButtons.forEach(button => {
@@ -210,21 +170,9 @@ searchInput.addEventListener('input', (e) => {
     applyFiltersAndSearch();
 });
 
-// Event listener for adding items to the cart (using event delegation)
+// Event listener for Quick View button (using event delegation)
 productContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('add-to-cart-btn')) {
-        const productId = parseInt(e.target.dataset.id);
-        const productToAdd = products.find(p => p.id === productId);
-
-        if (productToAdd && !cart.some(p => p.id === productId)) {
-            cart.push(productToAdd);
-            updateCartCount();
-            renderCart();
-            alert(`${productToAdd.name} has been added to your cart!`);
-        } else if (productToAdd) {
-            alert(`${productToAdd.name} is already in your cart.`);
-        }
-    }
+    
     if (e.target.classList.contains('quick-view-btn')) {
         const productId = parseInt(e.target.dataset.id);
         const product = products.find(p => p.id === productId);
@@ -236,21 +184,22 @@ productContainer.addEventListener('click', (e) => {
     }
 });
 
-// Event listeners for showing and hiding the cart modal
-cartBtn.addEventListener('click', () => {
-    cartModal.classList.remove('hidden');
-    cartModal.classList.add('flex');
-});
-
-closeCartBtn.addEventListener('click', () => {
-    cartModal.classList.add('hidden');
-    cartModal.classList.remove('flex');
-});
-
 // Event listeners for showing and hiding the quick view modal
 closeQuickViewBtn.addEventListener('click', () => {
     quickViewModal.classList.add('hidden');
     quickViewModal.classList.remove('flex');
+});
+
+// NEW: Event listener for "Contact Us to Order" button
+contactToOrderBtn.addEventListener('click', () => {
+    // 1. Close the quick view modal
+    quickViewModal.classList.add('hidden');
+    quickViewModal.classList.remove('flex');
+
+    // 2. Scroll to the contact section smoothly
+    document.getElementById('contact').scrollIntoView({
+        behavior: 'smooth'
+    });
 });
 
 // Event listener for the "Load More" button

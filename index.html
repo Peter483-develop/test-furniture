@@ -14,13 +14,14 @@
             transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
+        /* UPDATED: Ensure filter colors match the amber theme (92400e is a shade of amber-800) */
         .filter-room-btn:hover {
-            background-color: #3b82f6;
+            background-color: #92400e;
             color: #fff;
         }
 
         .filter-room-btn.active {
-            background-color: #3b82f6;
+            background-color: #92400e;
             color: #fff;
         }
 
@@ -29,23 +30,40 @@
         }
         
         .product-card:hover {
-            transform: scale(1.03) rotate(1deg);
+            transform: scale(1.03);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* NEW: Social Link Hover Color */
+        .social-link:hover {
+            color: #92400e; /* Use amber-800 color */
+        }
+
+        /* NEW: Mobile-Specific Scrollable Filter Bar */
+        @media (max-width: 767px) {
+            .filter-scroll-container {
+                overflow-x: scroll;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Firefox */
+                white-space: nowrap;
+            }
+            .filter-scroll-container::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
         }
     </style>
 </head>
 <body class="bg-stone-100 font-sans">
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-stone-200">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <a href="#home" class="flex items-center">
-                <img src="https://res.cloudinary.com/ddn5u79ju/image/upload/v1757100391/logo_gg53hk.png" alt="Furni-Mart Logo" class="h-10 w-10 mr-2">
+                <img src="https://res.cloudinary.com/ddn5u79ju/image/upload/v1757100391/logo_gg53hk.png" alt="Tri2030Furn Logo" class="h-10 w-10 mr-2">
                 <h1 class="text-2xl font-bold text-gray-800">Tri2030Fur</h1>
             </a>
-            <ul class="flex space-x-6 text-gray-600">
+            <ul class="hidden md:flex space-x-6 text-gray-600">
                 <li><a href="#home" class="hover:text-amber-800 transition-colors duration-300">Home</a></li>
                 <li><a href="#products" class="hover:text-amber-800 transition-colors duration-300">Products</a></li>
                 <li><a href="#contact" class="hover:text-amber-800 transition-colors duration-300">Contact</a></li>
-                <li><button id="cart-btn" class="relative text-xl text-gray-600 hover:text-amber-800 focus:outline-none">🛒<span id="cart-count" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">0</span></button></li>
             </ul>
         </nav>
     </header>
@@ -92,16 +110,18 @@
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Our Products</h2>
             
             <div class="mb-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
-                <div class="flex-grow flex flex-wrap justify-center md:justify-start gap-4">
-                    <button class="filter-room-btn active bg-amber-800 text-white py-2 px-6 rounded-full focus:outline-none transition-all duration-300" data-room="all">All</button>
-                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="living-room">Living Room</button>
-                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="dining-room">Dining Room</button>
-                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="bedroom">Bedroom</button>
-                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="office">Office</button>
-                    <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="outdoor">Outdoor</button>
+                <div class="flex-grow w-full md:w-auto filter-scroll-container">
+                    <div class="flex flex-nowrap md:flex-wrap justify-start md:justify-start gap-4 p-1">
+                        <button class="filter-room-btn active bg-amber-800 text-white py-2 px-6 rounded-full font-medium flex-shrink-0" data-room="all">All</button>
+                        <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full font-medium flex-shrink-0 focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="living-room">Living Room</button>
+                        <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full font-medium flex-shrink-0 focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="dining-room">Dining Room</button>
+                        <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full font-medium flex-shrink-0 focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="bedroom">Bedroom</button>
+                        <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full font-medium flex-shrink-0 focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="office">Office</button>
+                        <button class="filter-room-btn bg-stone-200 text-gray-800 py-2 px-6 rounded-full font-medium flex-shrink-0 focus:ring-2 focus:ring-amber-800 transition-all duration-300" data-room="outdoor">Outdoor</button>
+                    </div>
                 </div>
                 <div class="flex items-center space-x-4 w-full md:w-auto mt-4 md:mt-0">
-                    <select id="category-dropdown" class="p-2 border border-gray-300 rounded-md bg-white text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800">
+                    <select id="category-dropdown" class="p-2 border border-gray-300 rounded-md bg-white text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800 w-1/2 md:w-auto">
                         <option value="all">All Categories</option>
                         <option value="sofas">Sofas</option>
                         <option value="chairs">Chairs</option>
@@ -109,7 +129,7 @@
                         <option value="beds">Beds</option>
                         <option value="shelves">Shelves</option>
                     </select>
-                    <input type="text" id="search-input" placeholder="Search products..." class="p-2 border border-gray-300 rounded-md w-full md:w-64 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300">
+                    <input type="text" id="search-input" placeholder="Search products..." class="p-2 border border-gray-300 rounded-md w-1/2 md:w-64 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800 transition-all duration-300">
                 </div>
             </div>
 
@@ -120,20 +140,6 @@
                 <button id="load-more-btn" class="bg-amber-800 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-amber-900 transition-colors duration-300 hidden">Load More</button>
             </div>
         </section>
-
-        <div id="cart-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4">
-            <div class="bg-white rounded-lg p-6 w-full max-w-lg shadow-xl animate-scale-in">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-bold">Your Cart</h3>
-                    <button id="close-cart-btn" class="text-gray-500 hover:text-gray-800 text-3xl transition-transform duration-300 transform hover:rotate-90">&times;</button>
-                </div>
-                <div id="cart-items" class="space-y-4">
-                </div>
-                <div class="mt-4 pt-4 border-t border-gray-200 text-right">
-                    <p class="text-xl font-bold">Total: <span id="cart-total">KSh 0.00</span></p>
-                </div>
-            </div>
-        </div>
 
         <div id="quick-view-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-[9999]">
             <div class="bg-white rounded-lg p-6 w-full max-w-2xl shadow-xl animate-scale-in">
@@ -146,7 +152,7 @@
                     <div class="flex-1">
                         <p id="quick-view-price" class="text-xl font-semibold text-gray-700 mb-2"></p>
                         <p id="quick-view-description" class="text-gray-600 text-sm mb-4"></p>
-                        <button id="quick-view-add-to-cart-btn" class="bg-amber-800 text-white py-2 px-4 rounded-full font-semibold hover:bg-amber-900 transition-colors duration-300 add-to-cart-btn" data-id="">Add to Cart</button>
+                        <button id="contact-to-order-btn" class="bg-amber-800 text-white py-2 px-4 rounded-full font-semibold hover:bg-amber-900 transition-colors duration-300">Contact Us to Order</button>
                     </div>
                 </div>
             </div>
@@ -158,7 +164,7 @@
                 <p class="mt-4 text-lg text-gray-700">we are located Along Ngong Rd near Race course gardens, Nairobi, Kenya.
                     You can reach us through the following social media channels:
                 </p>
-                <div class="mt-8 flex space-x-6 text-3xl text-gray-600">
+                <div class="mt-8 flex justify-center space-x-6 text-3xl text-gray-600">
                     <a href="https://www.facebook.com/" class="social-link facebook hover:scale-125 transition-transform duration-300" target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
@@ -168,7 +174,7 @@
                     <a href="https://www.tiktok.com/" class="social-link tiktok hover:scale-125 transition-transform duration-300" target="_blank" aria-label="TikTok">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="https://wa.me/" class="social-link whatsapp hover:scale-125 transition-transform duration-300" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/+254708145582" class="social-link whatsapp hover:scale-125 transition-transform duration-300" target="_blank" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://twitter.com/" class="social-link x hover:scale-125 transition-transform duration-300" target="_blank" aria-label="X (formerly Twitter)">
