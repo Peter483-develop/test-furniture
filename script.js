@@ -54,8 +54,13 @@ const quickViewName = document.getElementById('quick-view-name');
 const quickViewImage = document.getElementById('quick-view-image');
 const quickViewPrice = document.getElementById('quick-view-price');
 const quickViewDescription = document.getElementById('quick-view-description');
-// NEW: Get the "Contact Us to Order" button
+// Existing: Get the "Contact Us to Order" button
 const contactToOrderBtn = document.getElementById('contact-to-order-btn'); 
+
+// NEW: Mobile Menu Elements
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : []; // Check for existence
 
 let productsPerPage = 9;
 let productsToShow = productsPerPage;
@@ -190,7 +195,7 @@ closeQuickViewBtn.addEventListener('click', () => {
     quickViewModal.classList.remove('flex');
 });
 
-// NEW: Event listener for "Contact Us to Order" button
+// Existing: Event listener for "Contact Us to Order" button
 contactToOrderBtn.addEventListener('click', () => {
     // 1. Close the quick view modal
     quickViewModal.classList.add('hidden');
@@ -201,6 +206,23 @@ contactToOrderBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// NEW: Event listener for the Hamburger Menu
+if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+}
+
+// NEW: Close menu when a link is clicked (important for mobile UX)
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('hidden')) {
+             mobileMenu.classList.add('hidden');
+        }
+    });
+});
+
 
 // Event listener for the "Load More" button
 loadMoreBtn.addEventListener('click', () => {
